@@ -1,0 +1,19 @@
+import sys
+
+
+def raiseit(n):
+    if n == 0:
+        return str(1)
+    val = raiseit(n-1)
+    ser = f"{2**n}, {val}"
+    return ser
+
+
+def main(argv):
+    n = int(argv[1])
+    print(f"n={n}")
+    print(raiseit(n))
+
+
+main(sys.argv)
+
