@@ -5,7 +5,7 @@ def raiseit(n):
     if n == 0:
         return str(1)
     val = raiseit(n-1)
-    ser = f"{2**n}, {val}"
+    ser = f"{val}, {2**n}"
     return ser
 
 
