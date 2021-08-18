@@ -3,18 +3,12 @@ import pytest
 
 def solution(arr):
     arr_sum = 0
-    expected_sum = 0
-    max_element = -1 * float('inf')
+    max_element = len(arr)
+    expected_sum = (max_element * (max_element + 1) // 2)
     for i in range(len(arr)):
-        expected_sum += (i + 1)
         arr_sum += arr[i]
-        if arr[i] > max_element:
-            max_element = arr[i]
 
-    if arr_sum == expected_sum:
-        return None
-    else:
-        return max_element - (arr_sum - expected_sum)
+    return max_element + 1 - (arr_sum - expected_sum)
 
 
 @pytest.mark.parametrize(
@@ -24,6 +18,8 @@ def solution(arr):
         ([2, 3, 1, 5, 6], 4),
         ([2, 3, 4, 5, 6], 1),
         ([4, 3, 1, 5, 6], 2),
+        ([4, 3, 1, 6, 2], 5),
+        ([4, 3, 1, 5, 2], 6),
     ]
 )
 def test_solution(arr, result):
