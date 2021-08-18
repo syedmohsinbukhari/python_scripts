@@ -20,6 +20,7 @@ def solution(arr):
         ([4, 3, 1, 5, 6], 2),
         ([4, 3, 1, 6, 2], 5),
         ([4, 3, 1, 5, 2], 6),
+        ([], 1),
     ]
 )
 def test_solution(arr, result):
