@@ -14,7 +14,6 @@ starting from 1 star complexity.
 3 star = 4 hours
 4 star = 8 hours
 5 star = 16 hours
-6 star = 32 hours
 and so on
 
 Author: syedmohsinbukhari@googlemail.com
